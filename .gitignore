@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# En caso de, aunque no creo blockear los envs los
+
+.env
+.env.*
+!.env.example
