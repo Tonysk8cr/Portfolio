@@ -28,3 +28,20 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+
+# skills
+/agents
+.agents
+../agents
+./agents
+
+/claude
+.claude
+../claude
+./claude
+
+/skills-lock.json
+.skills-lock.json
+../skills-lock.json
+./skills-lock.json

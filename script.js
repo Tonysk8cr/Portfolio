@@ -1,40 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const root = document.documentElement;
     const toggle = document.getElementById('darkModeToggle');
-    const nameSpan = document.getElementById('name');
-    const docImg = document.getElementById('curriculum');
+    const header = document.querySelector('.site-header');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 
-    // 1️⃣ Detectar estado inicial: localStorage > preferencia del sistema
-    let storedTheme = localStorage.getItem('dark-mode');
-    let isDark = storedTheme !== null ? storedTheme === 'true' : prefersDarkMode.matches;
+    // 1. Aplicar tema (la clase inicial ya la pone el script inline del <head>)
+    const applyTheme = (dark) => {
+        root.classList.toggle('dark-mode', dark);
+        toggle.setAttribute('aria-pressed', String(dark));
+        themeColor.setAttribute('content', dark ? '#0b1120' : '#f7f7f5');
+    };
 
-    // 2️⃣ Aplicar estado inicial
-    document.body.classList.toggle('dark-mode', isDark);
-    toggle.checked = isDark;
-    nameSpan.classList.add(isDark ? "color-cycle-dark" : "color-cycle-light");
-    docImg.src = isDark ? "img/document.svg" : "img/document-dark.svg";
+    const readStored = () => {
+        try { return localStorage.getItem('dark-mode'); } catch (e) { return null; }
+    };
 
-    // 3️⃣ Evento para el toggle manual
-    toggle.addEventListener('change', () => {
-        const dark = toggle.checked;
-        document.body.classList.toggle('dark-mode', dark);
-        localStorage.setItem('dark-mode', dark);
+    applyTheme(root.classList.contains('dark-mode'));
 
-        nameSpan.classList.remove("color-cycle-light", "color-cycle-dark");
-        nameSpan.classList.add(dark ? "color-cycle-dark" : "color-cycle-light");
-        docImg.src = dark ? "img/document.svg" : "img/document-dark.svg";
+    // 2. Toggle manual
+    toggle.addEventListener('click', () => {
+        const dark = !root.classList.contains('dark-mode');
+        applyTheme(dark);
+        try { localStorage.setItem('dark-mode', dark); } catch (e) {}
     });
 
-    // 4️⃣ Escuchar cambios del sistema en tiempo real (solo si el usuario no forzó modo)
+    // 3. Cambios del sistema en tiempo real (solo si el usuario no forzó modo)
     prefersDarkMode.addEventListener('change', (event) => {
-        if (localStorage.getItem('dark-mode') === null) {
-            const dark = event.matches;
-            document.body.classList.toggle('dark-mode', dark);
-            toggle.checked = dark;
-
-            nameSpan.classList.remove("color-cycle-light", "color-cycle-dark");
-            nameSpan.classList.add(dark ? "color-cycle-dark" : "color-cycle-light");
-            docImg.src = dark ? "img/document.svg" : "img/document-dark.svg";
-        }
+        if (readStored() === null) applyTheme(event.matches);
     });
+
+    // 4. Borde del header al hacer scroll (observer, sin listener de scroll)
+    const sentinel = document.createElement('div');
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.cssText = 'position:absolute;top:0;height:1px;width:1px;';
+    document.body.prepend(sentinel);
+    new IntersectionObserver(([entry]) => {
+        header.classList.toggle('is-scrolled', !entry.isIntersecting);
+    }).observe(sentinel);
 });
