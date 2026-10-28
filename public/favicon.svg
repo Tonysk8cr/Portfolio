@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    g { stroke: #1769e0; }
+    @media (prefers-color-scheme: dark) { g { stroke: #ff4d6d; } }
+  </style>
+  <!-- Same document icon as #i-file in index.html, colored with the site accents -->
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+  </g>
+</svg>
