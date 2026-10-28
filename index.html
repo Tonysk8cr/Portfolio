@@ -3,10 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthony Villalobos · Computer Science Engineer</title>
-  <meta name="description" content="Anthony Villalobos, Computer Science Engineer with experience in IT Support, Operations and Software Development. Projects in machine learning, data pipelines and C# applications." />
+  <title>Anthony Villalobos · Software Engineer in Costa Rica</title>
+  <meta name="description" content="Anthony Villalobos, software engineer in Costa Rica. Python, machine learning and data pipelines. Creator of an open-source LESCO sign language translator." />
+  <meta name="author" content="Anthony Villalobos" />
+  <link rel="canonical" href="https://tonysk8cr.github.io/Portfolio/" />
   <meta name="theme-color" content="#f7f7f5" />
   <link rel="icon" type="image/svg+xml" href="public/webstorm-icon-logo.svg" />
+
+  <!-- Link previews (LinkedIn, WhatsApp, Slack, X) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://tonysk8cr.github.io/Portfolio/" />
+  <meta property="og:title" content="Anthony Villalobos · Software Engineer" />
+  <meta property="og:description" content="Python, machine learning and data engineering from Costa Rica. Creator of the open-source LESCO sign language translator." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="profile:first_name" content="Anthony" />
+  <meta property="profile:last_name" content="Villalobos" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Structured data so search engines know who this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anthony Villalobos",
+    "url": "https://tonysk8cr.github.io/Portfolio/",
+    "jobTitle": "Software Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "San José", "addressCountry": "CR" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Hispanoamericana" },
+    "knowsAbout": ["Python", "Machine Learning", "Computer Vision", "Data Engineering", "C#", "SQL", "ServiceNow"],
+    "knowsLanguage": ["es", "en"],
+    "sameAs": [
+      "https://github.com/Tonysk8cr",
+      "https://www.linkedin.com/in/anthony-villalobos-55bb1a221/"
+    ]
+  }
+  </script>
 
   <!-- Apply the saved theme before first paint to avoid a light flash -->
   <script>
@@ -97,90 +128,68 @@
 
       <ul class="projects-grid" role="list">
         <li class="is-featured">
-          <a class="card" style="--card-color: #1769e0" href="https://github.com/Tonysk8cr/LETW" target="_blank" rel="noopener noreferrer">
-            <span class="card__eyebrow">AI / Computer Vision</span>
+          <a class="card" href="https://github.com/Tonysk8cr/LETW" target="_blank" rel="noopener noreferrer">
+            <span class="card__eyebrow">AI · Computer Vision</span>
             <div class="card__body">
               <h3 class="card__title">LESCO Sign Translator</h3>
-              <span class="card__desc">An open-source model that recognizes Costa Rican Sign Language (LESCO) and translates signs into text, built to support more inclusive communication.</span>
-              <span class="card__tags"><span>Python</span><span>TensorFlow</span><span>Keras</span><span>Computer Vision</span></span>
+              <span class="card__desc">Open-source model that translates Costa Rican Sign Language into text.</span>
+              <span class="card__tags"><span>Python</span><span>TensorFlow</span><span>OpenCV</span></span>
             </div>
             <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             <span class="visually-hidden">(opens in a new tab)</span>
           </a>
         </li>
-        <li class="is-tall">
-          <a class="card" style="--card-color: #00a7a0" href="https://github.com/Tonysk8cr/SteamGamesData" target="_blank" rel="noopener noreferrer">
-            <span class="card__eyebrow">Data Engineering / ETL</span>
+        <li>
+          <a class="card" href="https://github.com/Tonysk8cr/SteamGamesData" target="_blank" rel="noopener noreferrer">
+            <span class="card__eyebrow">Data Engineering</span>
             <div class="card__body">
               <h3 class="card__title">Steam Games ETL</h3>
-              <span class="card__desc">Modular pipeline that cleans, validates and loads Steam game data into PostgreSQL for analysis and dashboards.</span>
-              <span class="card__tags"><span>Python</span><span>Pandas</span><span>PostgreSQL</span></span>
+              <span class="card__tags"><span>Python</span><span>PostgreSQL</span></span>
             </div>
             <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             <span class="visually-hidden">(opens in a new tab)</span>
           </a>
         </li>
         <li>
-          <a class="card" style="--card-color: #b451b8" href="https://github.com/Tonysk8cr/ProyectoABD" target="_blank" rel="noopener noreferrer">
+          <a class="card" href="https://github.com/Tonysk8cr/ProyectoABD" target="_blank" rel="noopener noreferrer">
             <span class="card__eyebrow">Data Warehouse</span>
             <div class="card__body">
-              <h3 class="card__title">Inventory Data Warehouse</h3>
-              <span class="card__desc">Relational model, staging area and warehouse connected by ETL processes.</span>
-              <span class="card__tags"><span>Oracle 19c</span><span>PL/SQL</span><span>ETL</span></span>
+              <h3 class="card__title">Inventory Warehouse</h3>
+              <span class="card__tags"><span>Oracle</span><span>PL/SQL</span></span>
             </div>
             <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             <span class="visually-hidden">(opens in a new tab)</span>
           </a>
         </li>
-        <li>
-          <a class="card" style="--card-color: #e58a24" href="https://github.com/Tonysk8cr/PG1Progra5" target="_blank" rel="noopener noreferrer">
-            <span class="card__eyebrow">.NET / Web &amp; Mobile</span>
-            <div class="card__body">
-              <h3 class="card__title">Appointments &amp; Students</h3>
-              <span class="card__desc">Medical appointments web app and an Android student manager.</span>
-              <span class="card__tags"><span>C#</span><span>ASP.NET</span><span>.NET MAUI</span><span>SQL Server</span></span>
-            </div>
-            <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
-            <span class="visually-hidden">(opens in a new tab)</span>
-          </a>
-        </li>
-        <li>
-          <a class="card" style="--card-color: #e25555" href="https://github.com/Tonysk8cr/P1G5P3" target="_blank" rel="noopener noreferrer">
-            <span class="card__eyebrow">PHP / Web App</span>
-            <div class="card__body">
-              <h3 class="card__title">Repair Shop System</h3>
-              <span class="card__desc">Customer intake, diagnostics, pricing and repair status behind a session-based login.</span>
-              <span class="card__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></span>
-            </div>
-            <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
-            <span class="visually-hidden">(opens in a new tab)</span>
-          </a>
-        </li>
-        <li>
-          <a class="card" style="--card-color: #e58a24" href="https://github.com/Tonysk8cr/P4G2" target="_blank" rel="noopener noreferrer">
-            <span class="card__eyebrow">.NET / REST API</span>
+        <li class="is-half">
+          <a class="card" href="https://github.com/Tonysk8cr/P4G2" target="_blank" rel="noopener noreferrer">
+            <span class="card__eyebrow">Backend</span>
             <div class="card__body">
               <h3 class="card__title">Secure REST API</h3>
-              <span class="card__desc">ASP.NET Core API with JWT authentication and Entity Framework Core.</span>
-              <span class="card__tags"><span>C#</span><span>.NET 8</span><span>JWT</span><span>SQL Server</span></span>
+              <span class="card__tags"><span>C#</span><span>.NET 8</span><span>JWT</span></span>
             </div>
             <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             <span class="visually-hidden">(opens in a new tab)</span>
           </a>
         </li>
-        <li class="is-wide">
-          <a class="card card--more" style="--card-color: var(--muted)" href="https://github.com/Tonysk8cr?tab=repositories" target="_blank" rel="noopener noreferrer">
-            <span class="card__eyebrow">More on GitHub</span>
+        <li class="is-half">
+          <a class="card" href="https://github.com/Tonysk8cr/P1G5P3" target="_blank" rel="noopener noreferrer">
+            <span class="card__eyebrow">Web App</span>
             <div class="card__body">
-              <h3 class="card__title">All repositories</h3>
-              <span class="card__desc">University projects, experiments and open-source work across Python, C#, PHP and JavaScript.</span>
-              <span class="card__cta">Browse on GitHub</span>
+              <h3 class="card__title">Repair Shop System</h3>
+              <span class="card__tags"><span>PHP</span><span>MySQL</span></span>
             </div>
             <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             <span class="visually-hidden">(opens in a new tab)</span>
           </a>
         </li>
       </ul>
+
+      <a class="projects-more" href="https://github.com/Tonysk8cr?tab=repositories" target="_blank" rel="noopener noreferrer">
+        All repositories on GitHub
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        <span class="visually-hidden">(opens in a new tab)</span>
+      </a>
     </div>
   </section>
 
